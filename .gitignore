@@ -1,0 +1,20 @@
+# Environments & secrets
+.venv/
+.env
+kaggle.json
+*.pem
+
+# Data & models (too large / licensed — document download steps in README instead)
+data/raw/*
+data/processed/*
+!data/**/.gitkeep
+models/*
+!models/.gitkeep
+
+# Python / notebooks
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+.vscode/
