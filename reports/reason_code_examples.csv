@@ -1,0 +1,11 @@
+ts,category,amt,prob,outcome,reasons
+2020-01-30 23:41:17,grocery_pos,283.26,0.9999904729744898,TP,"Amount $283.26 | $2,150 spent on this card in the previous 24h | Card has 3 earlier transactions on record"
+2020-01-17 23:16:38,grocery_pos,307.02,0.9999897295987904,TP,Amount $307.02 | Merchant category: grocery_pos | Amount is 4.7x this card's usual spend
+2020-01-30 23:48:03,misc_net,815.9,0.9999888715978487,TP,"Amount $815.90 | $2,433 spent on this card in the previous 24h | Card has 4 earlier transactions on record"
+2020-01-24 23:55:53,misc_net,796.74,0.9999862282414816,TP,"$4,017 spent on this card in the previous 24h | Amount $796.74 | Amount is 11.5x this card's usual spend"
+2020-01-24 23:53:54,shopping_net,858.32,0.9999857016022118,TP,"$3,159 spent on this card in the previous 24h | Amount $858.32 | Amount is 12.8x this card's usual spend"
+2020-03-30 23:15:36,shopping_pos,4185.61,0.988469434064591,FP,"$2,156 spent on this card in the previous 24h | Amount $4,185.61 | Amount is 86.6x this card's usual spend"
+2020-03-17 22:30:28,health_fitness,18.89,0.9805681200801974,FP,Amount $18.89 | 23.5h since this card's previous transaction | Night-time transaction (22:00)
+2020-03-12 23:58:26,shopping_net,887.02,0.9797285584099783,FP,"Amount $887.02 | $2,001 spent on this card in the previous 24h | Amount is 9.7x this card's usual spend"
+2020-01-01 23:28:11,shopping_net,1474.89,0.9667490523175164,FP,"Amount $1,474.89 | $1,181 spent on this card in the previous 24h | Amount is 16.0x this card's usual spend"
+2020-03-03 02:30:56,gas_transport,21.13,0.9654779876671852,FP,Merchant category: gas_transport | Amount $21.13 | Night-time transaction (02:00)

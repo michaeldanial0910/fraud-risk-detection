@@ -1,0 +1,14 @@
+feature,mean_abs_shap,type
+amt,1.9285327262367642,original
+amt_sum_24h,1.3862184357462854,engineered
+category,1.0384039045487001,original
+amt_vs_card_avg,0.8693456381533824,engineered
+is_night,0.6395099617419915,engineered
+n_txn_24h,0.4868243731214971,engineered
+hours_since_prev,0.4345203229432602,engineered
+hour,0.42857858045680325,engineered
+card_prior_txns,0.4133518938824158,engineered
+age,0.3982796498470428,original
+city_pop,0.26428287960251484,original
+day_of_week,0.13903778785217152,engineered
+new_category_for_card,0.0020156995766222223,engineered
