@@ -1,0 +1,14 @@
+{
+  "transactions": 1296675,
+  "frauds": 7506,
+  "fraud_rate": 0.005788651743883394,
+  "fraud_share_of_dollars": 0.04371829009696541,
+  "cards": 983,
+  "cards_defrauded": 762,
+  "median_frauds_per_card": 10.0,
+  "median_burst_days": 1.8844618055555555,
+  "night_share_of_frauds": 0.8475885957900346,
+  "night_share_of_legit": 0.23156002044728038,
+  "start": "2019-01-01",
+  "end": "2020-06-21"
+}
