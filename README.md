@@ -1,7 +1,7 @@
 # Fraud / Transaction Risk Detection
 
 > UneeQ Interns · Machine Learning Track · October 2026
-> **Demo video:** [YouTube/LinkedIn link](#) · **Author:** Michael Danial
+> **Demo video:** [`demo/fraud_demo.mp4`](demo/fraud_demo.mp4) (30 s, the Streamlit app) · **Author:** Michael Danial
 
 A fraud-risk scoring pipeline for card transactions that decides **which transactions a human should look at,
 and in what order**. It never declines a payment on its own. Transactions are split into three tiers:
@@ -218,9 +218,14 @@ uv pip install -r requirements.txt
 python -m src.train        # ~6 min on an M-series MacBook (6 model variants + 15 tuning fits on 925k rows)
 python -m src.explain      # SHAP, reason codes, error analysis, fairness audit (~30 s)
 python -m src.memo         # writes reports/risk_threshold_memo.md
-pytest -q                  # 8 tests: leakage guards, split, cost logic, model robustness
-streamlit run app.py       # analyst review queue demo
+python -m src.eda          # small EDA tables for the app's "The data" page
+pytest -q                  # pipeline tests (leakage guards, split, cost logic) + app smoke tests
+streamlit run app.py       # the app at http://localhost:8501
 ```
+The app has five pages: **Review queue** (one test day ranked by risk, each alert with its reasons and an optional
+hindsight view), **Thresholds** (move the threshold and see alerts, catch rate and cost change), **Results**,
+**Mistakes** (what it misses, false alarms, fairness) and **The data**.
+
 Speed knobs live in `src/config.py`: `N_TUNE_ITER` (5 is enough on this data) and `SHAP_SAMPLE`.
 
 ## 8. Project Structure
@@ -234,9 +239,13 @@ Speed knobs live in `src/config.py`: `N_TUNE_ITER` (5 is enough on this data) an
 │   ├── train.py     # comparison, tuning, decision policy, test evaluation
 │   ├── evaluate.py  # generic metrics (from Task 1) + $ cost curve, capacity thresholds, tiers
 │   ├── explain.py   # SHAP, reason codes, error analysis, fairness audit
-│   └── memo.py      # generates the risk threshold memo from results
-├── tests/           # pytest: leakage guards + decision logic
+│   ├── memo.py      # generates the risk threshold memo from results
+│   └── eda.py       # small EDA tables for the app
+├── tests/           # pytest: leakage guards, decision logic, app smoke tests
+├── app_lib/         # app design system + data loading
+├── app_pages/       # the five Streamlit pages
+├── demo/            # fraud_demo.mp4 + the scripts that recorded and edited it
 ├── models/          # saved models + meta.json, gitignored
 ├── reports/         # memo, result tables, figures
-└── app.py           # Streamlit analyst queue
+└── app.py           # Streamlit entry point (navigation)
 ```
