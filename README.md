@@ -3,6 +3,11 @@
 > UneeQ Interns · Machine Learning Track · October 2026
 > **Demo video:** [`demo/fraud_demo.mp4`](demo/fraud_demo.mp4) (30 s, the Streamlit app) · **Author:** Michael Danial
 
+<p align="center">
+  <img src="docs/screenshots/app_review_queue.png" alt="Review queue: one held-out day ranked by risk, with reason codes for the selected alert" width="49%">
+  <img src="docs/screenshots/app_thresholds.png" alt="Thresholds page: alerts per day, frauds caught and total cost as the review threshold moves" width="49%">
+</p>
+
 A fraud-risk scoring pipeline for card transactions that decides **which transactions a human should look at,
 and in what order**. It never declines a payment on its own. Transactions are split into three tiers:
 approve, analyst review, and hold-and-verify with the customer. The thresholds come from a per-transaction
