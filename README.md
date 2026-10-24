@@ -1,7 +1,7 @@
 # Fraud / Transaction Risk Detection
 
 > UneeQ Interns · Machine Learning Track · October 2026
-> **Demo video:** [`demo/fraud_demo.mp4`](demo/fraud_demo.mp4) (30 s, the Streamlit app) · **Author:** Michael Danial
+> **Demo video:** [watch on YouTube](https://youtu.be/4muDJ4SJ6TE) · file: [`demo/fraud_demo.mp4`](demo/fraud_demo.mp4) (30 s, the Streamlit app) · **Author:** Michael Danial
 
 <p align="center">
   <img src="docs/screenshots/app_review_queue.png" alt="Review queue: one held-out day ranked by risk, with reason codes for the selected alert" width="49%">
